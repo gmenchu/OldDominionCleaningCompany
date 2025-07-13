@@ -75,9 +75,9 @@ nav > ul {
 
 /* HERO SECTION */
 .hero {
-  height: 100vh;
+  position: relative; /* make sure it's positioned for the overlay */
   background: url('images/janitorial.jpg') center/cover no-repeat;
-  position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,16 +85,17 @@ nav > ul {
   margin-top: 60px; /* for fixed header */
 }
 
-.hero::after {
+.hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  /* background-color: rgba(0, 64, 128, 0.6); */
-  z-index: 1;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 64, 128, 0.6); /* semi-transparent blue */
+  z-index: 1;  /* below text but above background */
 }
+
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* above overlay */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
