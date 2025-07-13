@@ -84,6 +84,7 @@ nav > ul {
   padding: 0 20px;
   margin-top: 60px; /* for fixed header */
 }
+
 .hero::after {
   content: "";
   position: absolute;
