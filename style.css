@@ -1,0 +1,358 @@
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #004080;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 10000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+nav > ul {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  position: relative;
+}
+
+/* Book Now Button */
+.book-btn {
+  background: #ffd700;
+  color: #004080;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.book-btn:hover {
+  background: #ffbf00;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1560184897-2f0e53d70a4d?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 60px; /* for fixed header */
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 64, 128, 0.6);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #fff;
+}
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 40px;
+}
+.hero-left h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.hero-left p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.cta-button {
+  background: #ffd700;
+  color: #004080;
+  padding: 14px 45px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.cta-button:hover {
+  background: #ffbf00;
+  transform: scale(1.05);
+}
+
+.hero-right {
+  flex: 1;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  color: #004080;
+}
+.hero-right h3 {
+  color: #004080;
+  margin-bottom: 15px;
+}
+.hero-right input,
+.hero-right select,
+.hero-right button {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+.hero-right input::placeholder,
+.hero-right select:invalid {
+  color: #666;
+}
+.hero-right select:not(:invalid) {
+  color: #004080;
+}
+.hero-right button {
+  background: #ffd700;
+  color: #004080;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.hero-right button:hover {
+  background: #ffbf00;
+}
+
+/* SERVICES SECTION */
+#services {
+  padding: 80px 20px;
+  background: #f5f8fc;
+  text-align: center;
+}
+#services h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #004080;
+  margin-bottom: 50px;
+}
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.service-item {
+  background: white;
+  width: 250px;
+  border-radius: 12px;
+  padding: 40px 20px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+.service-item i {
+  font-size: 48px;
+  color: #004080;
+  margin-bottom: 20px;
+}
+.service-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #004080;
+  font-weight: 700;
+}
+.service-item p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* CONTACT SECTION */
+#contact {
+  padding: 70px 20px 100px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#contact h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #004080;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1.8px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #004080;
+}
+#contact-form button {
+  background: #004080;
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+#contact-form button:hover {
+  background: #003366;
+}
+
+/* FOOTER */
+footer {
+  background: #004080;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #ffd700;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-block;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-item {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 460px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-left, .hero-right {
+    max-width: 100%;
+    margin: 0 0 30px;
+  }
+  .hero-right {
+    padding: 20px;
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.form-status {
+  margin-top: 10px;
+  font-weight: 600;
+  color: green;
+}
