@@ -1,0 +1,103 @@
+<!-- HEADER -->
+<header>
+  <div class="logo">Old Dominion Cleaning Company</div>
+  <nav>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><button class="book-btn" id="openModalBtn">Book Now</button></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1>#1 Ranked Best Cleaning Services in Richmond, VA</h1>
+      <p>Professional Cleaning Services in Richmond, VA</p>
+      <button class="cta-button">Get a Free Quote</button>
+    </div>
+
+    <div class="hero-right">
+      <h3>Schedule Your FREE Estimate Today!</h3>
+      <form id="estimate-form" aria-label="Schedule your free estimate form">
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+        <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel" />
+        <select name="service" required>
+          <option value="" disabled selected>Select Service</option>
+          <option value="Home Cleaning">Home Cleaning</option>
+          <option value="Commercial Cleaning">Commercial Cleaning</option>
+          <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
+          <option value="Deep Cleaning">Deep Cleaning</option>
+        </select>
+        <input type="email" name="email" placeholder="Email" required autocomplete="email" />
+        <input type="text" name="address" placeholder="Address" required autocomplete="street-address" />
+        <button type="submit">Submit</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services">
+  <h2>Our Cleaning Services</h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <i class="fa-solid fa-broom"></i>
+      <h3>Home Cleaning</h3>
+      <p>Reliable and thorough home cleaning services tailored to your needs.</p>
+    </div>
+    <div class="service-item">
+      <i class="fa-solid fa-building"></i>
+      <h3>Commercial Cleaning</h3>
+      <p>Professional cleaning solutions for offices, stores, and commercial spaces.</p>
+    </div>
+    <div class="service-item">
+      <i class="fa-solid fa-truck-moving"></i>
+      <h3>Move In/Out Cleaning</h3>
+      <p>Ensure your property is spotless before moving in or out.</p>
+    </div>
+    <div class="service-item">
+      <i class="fa-solid fa-water"></i>
+      <h3>Deep Cleaning</h3>
+      <p>Comprehensive deep cleaning for a truly refreshed home or office.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form id="contact-form" aria-label="Contact form">
+    <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+    <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
+    <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel" />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- MODAL -->
+<div id="modalOverlay" class="modal-overlay">
+  <div class="modal">
+    <button id="modalCloseBtn" class="modal-close">&times;</button>
+    <h2>Book Your Cleaning</h2>
+    <form id="booking-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <button type="submit">Submit Booking</button>
+      <p id="booking-status" class="form-status"></p>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Old Dominion Cleaning Company. All rights reserved.</p>
+  <p>
+    <a href="tel:+1234567890"><i class="fa fa-phone"></i> +1 (234) 567-890</a> |
+    <a href="mailto:info@olddominioncleaning.com"><i class="fa fa-envelope"></i> support@olddominioncleaning.com</a>
+  </p>
+</footer>
